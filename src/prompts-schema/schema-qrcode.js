@@ -7,7 +7,7 @@ const promptSchemaQrcode = [
     },
     {
         name:"type",
-        description: chalk.yellow("Escolha entro o tipo (1- NORMAL ou 2- TERMINAL)"),
+        description: chalk.yellow("Escolha entro o tipo (1 - GRANDE ou 2 - PEQUENO)"),
         pattern: /^[1-2]+$/,
         message: chalk.red.italic("Escolha apenas entre 1 e 2"),
         required: true
