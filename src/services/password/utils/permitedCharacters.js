@@ -1,10 +1,12 @@
-async function permittedCharacters() {
+async function permittedCharacters(result) {
     let permited = []
 
-    if (process.env.UPPERCASE_LETTERS === "true") permited.push(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    if (process.env.LOWERCASE_LETTERS === "true") permited.push(..."abcdefghijklmnopqrstuvwxyz")
-    if (process.env.NUMBERS === "true") permited.push(..."0123456789")
-    if (process.env.SPECIAL_CHARACTERS === "true") permited.push(..."!@#$%&*-_=+?")
+    if (result.upper == 1) permited.push(..."ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    if (result.lower == 1) permited.push(..."abcdefghijklmnopqrstuvwxyz")
+    if (result.numbers == 1) permited.push(..."0123456789")
+    if (result.special == 1) permited.push(..."!@#$%&*-_=+?")
+
+    if(permited.length == 0) permited.push(..."abcdefghijklmnopqrstuvwxyz")
 
     return permited
 }

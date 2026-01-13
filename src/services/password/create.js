@@ -1,11 +1,15 @@
 import chalk from "chalk";
 import handler from "./handler.js";
+import prompt from "prompt";
+import promptSchemaPassword from "../../prompts-schema/schema-passwordGenerator.js";
 
 
 
 async function createPassword() {
-    const password = await handler()
-    console.log(chalk.green(`password: ${password}`))
+    prompt.get(promptSchemaPassword, handler)
+    prompt.start()
+    // const password = await handler()
+    // console.log(chalk.green(`password: ${password}`))
 }
 
 export default createPassword
