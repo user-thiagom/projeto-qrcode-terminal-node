@@ -1,4 +1,3 @@
-import chalk from "chalk";
 import handler from "./handler.js";
 import prompt from "prompt";
 import promptSchemaPassword from "../../prompts-schema/schema-passwordGenerator.js";
